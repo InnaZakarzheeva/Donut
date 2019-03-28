@@ -1,0 +1,56 @@
+
+.product_element{
+	display: flex;
+	flex-direction: column;
+	width: 350px;
+	height: 550px;
+	border: none;
+	margin-top: 40px;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 54px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px black;
+}
+.product_price{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+.product_name{
+	font-size: 36px;
+	font-family: 'Shadows Into Light';
+}
+.price{
+	font-family: 'Libre Barcode 128 Text', cursive;
+	font-size: 54px;
+}
+.seeMore{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 80%;
+	height: 50px;
+	border: none;
+	font-size: 36px;
+	border-radius: 5px;
+	justify-content: center;
+	box-shadow: 0 0 10px black;
+	cursor: pointer;
+	font-family: 'Shadows Into Light';
+}
+.seeMoreText{
+    display: flex;
+	width: 90%;
+	justify-content: center;
+	text-align: center;
+}
+.seeMoreText>p{
+    font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	margin: 0 auto;
+}
+.donut_image{
+	height: 273px;
+	animation: App-logo-spin infinite 20s linear;
+}

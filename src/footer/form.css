@@ -1,0 +1,102 @@
+.form_wrapper{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form{
+	display: flex;
+	flex-direction: column;
+	width: 550px;
+	justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px black;
+    padding: 50px 0 50px 0;
+    background-color: white;
+    margin-left: 100px;
+
+    margin-bottom: -200px;
+    z-index: 1000;
+}
+.email{
+    background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	height: 40px;
+    width: 80%;
+    outline: none;
+    font-size: 22px;
+    padding: 0 0 0 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+.validate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 10px black;
+    border: none;
+	width: 80%;
+	height: 50px;
+	border-radius: 5px;
+	font-size: 24px;
+	margin-top: 10px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    color: black;
+    outline: none;
+    font-weight: 600;
+    
+}
+.text_about{
+    background-color: white;
+	width: 80%;
+	height: 100px;
+	border-radius: 5px;
+	border: 1px solid black;
+    margin-top: 10px;
+    outline: none;
+    font-size: 22px;
+}
+h5{
+    margin: 0 auto;
+	font-size: 36px;
+}
+
+.footer_wrapper{
+    display: flex;
+    width: 100%;
+	height: 250px;
+    background-image: linear-gradient(to right, #a890fe, #ea8d8d);
+    justify-content: flex-end;
+}
+.footer_logo{
+    height: 60px;
+    animation: App-logo-spin infinite 20s linear;
+}
+.contacts{
+    display: flex;
+	flex-direction: column;
+	width: 40%;
+	justify-content: center;
+	align-items: center;
+}
+.contacts>span{
+	font-size: 72px;
+    font-weight: 900;
+    font-family: 'Shadows Into Light';
+}
+.social{
+    display: flex;
+	width: 70%;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.social_img{
+    height: 70px;
+}
+.social_img:hover{
+    transform: rotate(60deg);
+}

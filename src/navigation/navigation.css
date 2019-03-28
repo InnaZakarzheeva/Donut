@@ -1,0 +1,48 @@
+.navigation_wrapper{
+    display: flex;
+	width: 100%;
+	height: 100px;
+	background-image: linear-gradient(to right, #a890fe, #ea8d8d);
+	justify-content: space-between;
+	align-items: center;
+}
+.img_nav{
+    animation: App-logo-spin infinite 20s linear;
+    height: 70px;
+    margin-left: 50px;
+    pointer-events: none;
+}
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.container{
+	display: flex;
+	width: 40%;
+	height: 100%;
+	outline: none;
+}
+.container a:hover {
+	color: white;
+}
+ul {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+}
+ul, li{
+	list-style-type: none;
+}
+li{
+	width: 150px;
+}
+a{
+	text-decoration: none;
+	font-family: 'Shadows Into Light';
+	font-size: 40px;
+	color: black;
+}
