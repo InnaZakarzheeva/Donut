@@ -2,6 +2,22 @@ import React from "react";
 import './form.css';
 
 export default class Form extends React.Component{
+    state = {
+        email: '',
+        text: ''
+      }
+
+      sendMail = () =>{
+        const  { 
+           email,
+             text
+            } =this.state
+             const linkTag = document.getElementById('link')
+            linkTag.href = `mailto:innazakarzheeva2@gmail.com?subject=Partnership
+            &body=${"Email: " + email +'%0A'+ "Текст: "+ text}`
+            linkTag.click()
+      }
+    
     render(){
         return(
            <div className="form_wrapper">
@@ -13,12 +29,15 @@ export default class Form extends React.Component{
                 
 <br></br>
 <br></br>
+<a id='link'target="_blank" style={{display: 'none'}} ></a>
                 <form class="form">
+               
                    
-                    <input type="text" className='email' placeholder="Enter your e-mail"/>
+                    <input type="text"  name="email" className='email' placeholder="Enter your e-mail"  onChange = {(event)=>this.setState({email: event.target.value})}/>
                    
-                    <textarea name="text" rows="5" cols="10" className="text_about" placeholder="Enter your message"/> 
-                    <button type='submit' className='validate'>Send</button>
+                    <textarea name="text" rows="5" cols="10" className="text_about" placeholder="Enter your message" onChange = {(event)=>this.setState({text: event.target.value})}/> 
+                    <input type='submit' className='validate' onClick={this.sendMail}></input>
+                   
                 </form>
 
                 <div className="footer_wrapper">
