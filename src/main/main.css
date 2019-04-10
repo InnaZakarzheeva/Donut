@@ -54,3 +54,23 @@
 	height: 273px;
 	animation: App-logo-spin infinite 20s linear;
 }
+
+@media screen and (min-width: 1440px){
+	.product_element{
+		width: 400px;
+	}
+}
+@media screen and (max-width: 375px) and (min-width: 320px){
+	.product_element{
+		width: 300px;
+	}
+	.donut_image{
+		height: 220px;
+	}
+	.product_name{
+		font-size: 28px;
+	}
+	.price{
+		font-size: 48px;
+	}
+}
