@@ -1,12 +1,40 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import product from './reducer/reducer.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const saveState = (state) => {
+    try {
+        const serialisedState = JSON.stringify(state);
+        window.localStorage.setItem('product_state', serialisedState);
+    } catch (err) {
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    }
+};
+
+const loadState = () => {
+    try {
+        const serialisedState = window.localStorage.getItem('product_state');
+        if (!serialisedState) return undefined;
+        return JSON.parse(serialisedState);
+    } catch (err) {
+        return undefined;
+    }
+};
+
+const oldState = loadState();
+export const store = createStore(product, oldState);
+
+render(
+    <Provider store={store}>
+        <App/>
+    </Provider>, 
+    document.getElementById('root')
+)
+
+store.subscribe( () => {
+    saveState(store.getState());
+})

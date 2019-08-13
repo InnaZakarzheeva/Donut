@@ -1,0 +1,148 @@
+.header{
+	display: flex;
+	width: 100%;
+	height: 560px;
+	background-image: linear-gradient(to right, #a890fe, #ea8d8d);
+	justify-content: center;
+	font-size: 270px;
+	font-family: 'Shadows Into Light', cursive;
+}
+.img_header{
+    display: flex;
+	width: 300px;
+	height: 600px;
+}
+/* Block */
+.parallax {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+
+    height: 150px;
+}
+.p4{
+	background-image: url("../../image/block.jpg");
+}
+.p5{
+	background-image: url("../../image/oreo.jpg");
+}
+.title_block{
+    font-family: 'Shadows Into Light';
+	font-size: 72px;
+	font-weight: 900;
+	color: white;
+	text-shadow: 0 0 40px black;
+}
+
+@media screen and (max-width: 375px) and (min-width: 320px){
+	.header{
+		font-size: 70px;
+		height: 170px;
+	}
+	.img_header{
+		height: 170px;
+		width: 85px;
+	}
+	.title_block{
+		font-size: 46px;
+	}
+	.parallax{
+		height: 100px;
+	}
+}
+
+@media screen and (max-width: 510px) and (min-width: 375px){
+	.header{
+		font-size: 100px;
+		height: 200px;
+	}
+	.img_header{
+		height: 200px;
+		width: 100px;
+	}
+	.title_block{
+		font-size: 50px;
+	}
+	.parallax{
+		height: 100px;
+	}
+}
+@media screen and (max-width: 550px) and (min-width: 510px){
+	.header{
+		font-size: 115px;
+		height: 250px;
+	}
+	.img_header{
+		height: 250px;
+		width: 125px;
+	}
+	.title_block{
+		font-size: 50px;
+	}
+	.parallax{
+		height: 100px;
+	}
+}
+@media screen and (max-width: 650px) and (min-width: 550px){
+	.header{
+		font-size: 140px;
+		height: 300px;
+	}
+	.img_header{
+		height: 300px;
+		width: 150px;
+	}
+	.title_block{
+		font-size: 50px;
+	}
+	.parallax{
+		height: 100px;
+	}
+}
+
+@media screen and (max-width: 768px) and (min-width: 650px){
+	.header{
+		font-size: 170px;
+		height: 350px;
+	}
+	.img_header{
+		height: 350px;
+		width: 175px;
+	}
+	.title_block{
+		font-size: 65px;
+	}
+	.parallax{
+		height: 100px;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px){
+	.header{
+		font-size: 190px;
+		height: 400px;
+	}
+	.img_header{
+		height: 400px;
+		width: 200px;
+	}
+	.title_block{
+		font-size: 65px;
+	}
+	.parallax{
+		height: 100px;
+	}
+}

@@ -3,10 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.3.2",
+    "antd": "^3.21.4",
+    "group": "^1.0.2",
+    "history": "^4.9.0",
     "react": "^16.8.5",
+    "react-alert": "^5.5.0",
+    "react-alert-template-basic": "^1.0.0",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.8.5",
-    "react-scripts": "2.1.8"
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "2.1.8",
+    "react-simple-alerts": "^1.0.0",
+    "react-stripe-elements": "^4.0.0",
+    "react-transition": "^1.0.3",
+    "react-transition-group": "^4.2.2",
+    "redux": "^4.0.4",
+    "simple-react-alert": "^1.1.2",
+    "sweetalert": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
