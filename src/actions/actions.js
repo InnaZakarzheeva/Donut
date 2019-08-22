@@ -3,8 +3,16 @@ export const addProduct = (text, price) => {
     return {
         type: 'add',
         id: nextId++,
+        count: 1,
         text,
         price
+    }
+}
+
+export const countProduct = (count) => {
+    return {
+        type: 'count',
+        count: count
     }
 }
 

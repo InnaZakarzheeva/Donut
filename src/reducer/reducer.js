@@ -4,7 +4,15 @@ const products = (state, action) => {
             return {
                 id: action.id,
                 text: action.text,
-                price: action.price
+                price: action.price,
+                count: action.count
+            }
+        case 'count':
+            return {
+                id: action.id,
+                text: action.text,
+                price: action.price,
+                count: action.count
             }
         case 'delete':
             if(state.id !== action.id){
@@ -21,6 +29,10 @@ const product = (state=[], action) => {
             return[
                 ...state,
                 products(undefined, action)
+            ]
+        case 'count':
+            return [
+                ...state
             ]
         case 'delete':
             return state.filter((item) => item.id !== action.id);
