@@ -3,7 +3,7 @@ import './buy.css';
 import {Link} from "react-router-dom";
 import {connect} from 'react-redux';
 import {store} from '../../index';
-import {deleteProduct} from '../../actions/actions';
+import {deleteProduct, countProduct} from '../../actions/actions';
 import deleteImg from '../../image/delete.png'
 import {StripeProvider} from 'react-stripe-elements';
 import MyStoreCheckout from './MyStoreCheckout.js';
@@ -12,7 +12,7 @@ import { MDBInput } from 'mdbreact';
 import "mdbreact/dist/css/mdb.css";
 
 export default class Buy extends React.Component {
-     style = {
+    style = {
         width: '50px',
         height: '30px',
         fontFamily: 'Shadows Into Light',
@@ -23,20 +23,21 @@ export default class Buy extends React.Component {
     handleCreateProductsList = (item) => {
         return  <div className='task-wrapper'>
                     <span key={item.id}>{item.text}</span>
-                    <div className='details-product-wrapper'>
-                        <MDBInput style={this.style} type="number" valueDefault='1' min='1'/>
-                        <span>{item.price}$</span>
-                        <img src={deleteImg} alt='delete' 
+                    <MDBInput style={this.style} type="number" valueDefault={item.count} min='1'
+                        onChange={(event) => {
+                            store.dispatch(countProduct(item.count = event.target.value))
+                        }}/>
+                    <span>{item.price * item.count}$</span>
+                    <img src={deleteImg} alt='delete' 
                         onClick={() => store.dispatch(deleteProduct(item.id))}
                         style={{cursor: 'pointer', width: '30px', height: '30px'}}/>
-                    </div>
                 </div>
     }
     countPrice = () => {
         let result = 0;
-        this.props.product.map(item => {
-            result += item.price;
-        })
+        this.props.product.map(item => 
+            result += item.price * item.count
+        )
         return result;
     }
     render() {
