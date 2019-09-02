@@ -8,15 +8,28 @@ import deleteImg from '../../image/delete.png'
 import {StripeProvider} from 'react-stripe-elements';
 import MyStoreCheckout from './MyStoreCheckout.js';
 import TextField from '@material-ui/core/TextField';
+import { MDBInput } from 'mdbreact';
+import "mdbreact/dist/css/mdb.css";
 
 export default class Buy extends React.Component {
+     style = {
+        width: '50px',
+        height: '30px',
+        fontFamily: 'Shadows Into Light',
+        fontWeight: '500',
+        fontSize: '28px',
+        textAlign: 'center'
+    }
     handleCreateProductsList = (item) => {
         return  <div className='task-wrapper'>
                     <span key={item.id}>{item.text}</span>
-                    <span>{item.price}$</span>
-                    <img src={deleteImg} alt='delete' 
+                    <div className='details-product-wrapper'>
+                        <MDBInput style={this.style} type="number" valueDefault='1' min='1'/>
+                        <span>{item.price}$</span>
+                        <img src={deleteImg} alt='delete' 
                         onClick={() => store.dispatch(deleteProduct(item.id))}
                         style={{cursor: 'pointer', width: '30px', height: '30px'}}/>
+                    </div>
                 </div>
     }
     countPrice = () => {
