@@ -1,4 +1,4 @@
-## Donut's Shop :donut
+## Donut's Shop :doughnut:
 [DEMO](https://epic-yonath-4901bd.netlify.com)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
