@@ -7,6 +7,7 @@
     "antd": "^3.21.4",
     "group": "^1.0.2",
     "history": "^4.9.0",
+    "mdbreact": "^4.20.0",
     "react": "^16.8.5",
     "react-alert": "^5.5.0",
     "react-alert-template-basic": "^1.0.0",

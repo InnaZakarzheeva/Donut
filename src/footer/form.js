@@ -6,25 +6,19 @@ export default class Form extends React.Component{
         email: '',
         text: ''
       }
-
       sendMail = () =>{
-        const  { 
-           email,
-             text
-            } =this.state
-             const linkTag = document.getElementById('link')
-            linkTag.href = `mailto:innazakarzheeva2@gmail.com?subject=Partnership
-            &body=${"Email: " + email +'%0A'+ "Текст: "+ text}`
-            linkTag.click()
+        const  { email, text } = this.state
+        const linkTag = document.getElementById('link')
+        linkTag.href = `mailto:innazakarzheeva2@gmail.com?subject=Partnership&body=${"Email: " + email +'%0A'+ "Текст: "+ text}`
+        linkTag.click()
       }
     
     render(){
         return(
            <div className="form_wrapper">
            <br></br>
-        
 	            <div class="parallax p5">
-                   <a name="footer"> <span className="title_block">Partnership</span></a>
+                   <a name="footer"><span className="title_block">Partnership</span></a>
                 </div>
                 
 <br></br>

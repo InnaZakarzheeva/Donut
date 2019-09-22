@@ -8,9 +8,6 @@ export default class Main extends React.Component{
       };
     render(){
         return(
-           
-	          
-             
 		            <div className="product_element">
                   {this.props.item.photo.map(photo => <img src={photo} className="donut_image"/>)}
                     <div className="product_price">
@@ -25,9 +22,6 @@ export default class Main extends React.Component{
                               </div>
                         ):null}
 		          </div>
-           
-      
-
         );
     }
 }
