@@ -8,7 +8,7 @@ export default class Header extends React.Component{
                 <div className="header">
                     D<img src={require("../../image/0.png")} className="img_header" alt='background'/>NUTS
                 </div>
-                <a name="donuts">
+                <a name="donuts" href="#home">
                     <div className="parallax p4">
                     <span className="title_block">THAT YOU LOVE</span>
                     </div>

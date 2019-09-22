@@ -13,7 +13,7 @@ export default class Main extends React.Component{
     return(
 		  <div className="product_element">
         {
-          this.props.item.photo.map(photo => <img src={photo} className="donut_image" alt='donut'/>)
+          this.props.item.photo.map(photo => <img src={photo} className="donut_image" alt='donut' key={photo}/>)
         }
         <div className="product_price">
           <span className="product_name">{this.props.item.name}</span>

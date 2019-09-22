@@ -29,7 +29,7 @@
 	align-items: center;
 }
 .container a:hover {
-	color: white;
+	color: white!important;
 }
 ul {
 	display: flex;
@@ -47,7 +47,7 @@ a{
 	text-decoration: none;
 	font-family: 'Shadows Into Light';
 	font-size: 40px;
-	color: black;
+	color: black!important;
 }
 .buy{
 	width: 70px;
@@ -69,11 +69,7 @@ a{
 		display: none;
 	}
 	.container{
-		width: 100%;
-	}
-	.buy {
-		width: 45px;
-		height: 45px;
+		width: 90%;
 	}
 }
 
@@ -82,20 +78,16 @@ a{
 		height: 70px;
 	}
 	a{
-		font-size: 30px;
+		font-size: 34px;
 	}
 	li{
-		width: 80px;
+		width: 100px;
 	}
 	.img_nav{
 		display: none;
 	}
 	.container{
-		width: 100%;
-	}
-	.buy {
-		width: 50px;
-		height: 50px;
+		width: 90%;
 	}
 }
 
@@ -113,11 +105,7 @@ a{
 		display: none;
 	}
 	.container{
-		width: 100%;
-	}
-	.buy {
-		width: 60px;
-		height: 60px;
+		width: 90%;
 	}
 }
 @media screen and (max-width: 550px) and (min-width: 510px){
@@ -134,11 +122,7 @@ a{
 		display: none;
 	}
 	.container{
-		width: 100%;
-	}
-	.buy {
-		width: 60px;
-		height: 60px;
+		width: 90%;
 	}
 }
 @media screen and (max-width: 670px) and (min-width: 550px){
@@ -146,20 +130,16 @@ a{
 		height: 100px;
 	}
 	a{
-		font-size: 42px;
+		font-size: 47px;
 	}
 	li{
-		width: 120px;
+		width: 140px;
 	}
 	.img_nav{
 		display: none;
 	}
 	.container{
-		width: 100%;
-	}
-	.buy {
-		width: 65px;
-		height: 65px;
+		width: 90%;
 	}
 }
 @media screen and (max-width: 768px) and (min-width: 670px){
@@ -170,28 +150,29 @@ a{
 		font-size: 50px;
 	}
 	li{
-		width: 150px;
+		width: 180px;
 	}
 	.img_nav{
-		display: none;
+		margin: 10px 20px 0 20px;
+		height: 55px;
 	}
 	.container{
-		width: 100%;
+		width: 90%;
 	}
 }
 
 @media screen and (max-width: 880px) and (min-width: 768px){
 	.container{
-		width: 80%;
+		width: 70%;
 	}
 }
 @media screen and (max-width: 1024px) and (min-width: 880px){
 	.container{
-		width: 70%;
+		width: 60%;
 	}
 }
 @media screen and (min-width: 1024px){
 	.container{
-		width: 60%;
+		width: 50%;
 	}
 }

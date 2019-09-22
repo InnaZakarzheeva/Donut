@@ -20,8 +20,8 @@ export default class Buy extends React.Component {
         fontSize: '28px',
         textAlign: 'center'
     }
-    handleCreateProductsList = (item) => {
-        return  <div className='task-wrapper'>
+    handleCreateProductsList = (item, index) => {
+        return  <div className='task-wrapper' key={index}>
                     <span key={item.id}>{item.text}</span>
                     <MDBInput style={this.style} type="number" valueDefault={item.count} min='1'
                         onChange={(event) => {
@@ -35,9 +35,9 @@ export default class Buy extends React.Component {
     }
     countPrice = () => {
         let result = 0;
-        this.props.product.map(item => 
-            result += item.price * item.count
-        )
+        this.props.product.map(item => {
+           return result += item.price * item.count;
+        })
         return result;
     }
     render() {

@@ -9,7 +9,7 @@ import product from './reducer/reducer.js';
 const saveState = (state) => {
     try {
         const serialisedState = JSON.stringify(state);
-        window.localStorage.setItem('product_state', serialisedState);
+        window.localStorage.setItem('product', serialisedState);
     } catch (err) {
 
     }
@@ -17,7 +17,7 @@ const saveState = (state) => {
 
 const loadState = () => {
     try {
-        const serialisedState = window.localStorage.getItem('product_state');
+        const serialisedState = window.localStorage.getItem('product');
         if (!serialisedState) return undefined;
         return JSON.parse(serialisedState);
     } catch (err) {

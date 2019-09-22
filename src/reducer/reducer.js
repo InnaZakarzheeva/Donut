@@ -23,17 +23,12 @@ const products = (state, action) => {
             return state;
     }
 }
-const product = (state=[], action) => {
+const product = (state = [], action) => {
     switch(action.type){
         case 'add':
-            return[
-                ...state,
-                products(undefined, action)
-            ]
+            return [ ...state, products(null, action)]
         case 'count':
-            return [
-                ...state
-            ]
+            return [...state]
         case 'delete':
             return state.filter((item) => item.id !== action.id);
         default:
