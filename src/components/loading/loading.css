@@ -1,0 +1,15 @@
+.wrapper-loading{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #a890fe, #ea8d8d);
+    text-align: center;
+}
+.wrapper-loading>span{
+    font-size: 40px;
+    font-family: 'Shadows Into Light';
+    font-weight: 700;
+    width: 100%;
+}
